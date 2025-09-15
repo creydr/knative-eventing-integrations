@@ -26,6 +26,7 @@
         <quarkus.container-image.insecure>true</quarkus.container-image.insecure>
         <quarkus.container-image.registry>localhost:5001</quarkus.container-image.registry>
         <quarkus.container-image.group>openshift-knative</quarkus.container-image.group>
+        <quarkus.jib.platforms>linux/amd64,linux/arm64</quarkus.jib.platforms>
 
         <!-- needed from tooling/archetypes -->
         <maven-version>3.9.9</maven-version>
@@ -174,6 +175,7 @@
                 <quarkus.container-image.additional-tags>latest</quarkus.container-image.additional-tags>
                 <quarkus.container-image.build>true</quarkus.container-image.build>
                 <quarkus.container-image.push>true</quarkus.container-image.push>
+                <quarkus.jib.platforms>${quarkus.jib.platforms}</quarkus.jib.platforms>
 
                 <!-- Unset to prevent default inheritance -->
                 <quarkus.container-image.insecure>false</quarkus.container-image.insecure>
